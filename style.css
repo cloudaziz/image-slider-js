@@ -1,5 +1,97 @@
-*, *::after, *::before {
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    width: 600px;
+    /* border: 1px solid green; */
+    margin: 30px auto 0;
+}
+
+.slider-wrapper {
+    position: relative;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+.slider {
+    height: 200px;
+    display: flex;
+    list-style: none;
+    /* transform: translateX(-600px); */
+    transition: transform .6s ease;
+}
+
+.slider li {
+    border: 1px solid green;
+    flex: 0 0 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #ccc;
+}
+
+.slider-control .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-control .arrow i {
+    font-size: 48px;
+}
+
+.slider-control .left {
+    left: 0;
+    cursor: pointer;
+}
+
+.slider-control .right {
+    right: 0;
+    cursor: pointer;
+}
+
+.slider-control ul {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.slider-control ul li {
+    width: 20px;
+    height: 20px;
+    border: 3px solid red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-control ul li.active {
+    background-color: red;
+}
+/* setting cercle background-color & color */
+.cercle {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.cercle > * {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color);
+    color: var(--color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+/*  */
+
